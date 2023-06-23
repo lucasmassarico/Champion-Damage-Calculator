@@ -1,0 +1,81 @@
+**Projeto CDC**
+
+'''
+  No primeiro momento, preciso configurar o MerakiAnalytics para a minha aplicação, então é necessário fazer isto.
+'''
+
+TODO - GERAL:
+  ✔ Organizar a estrutura do projeto @done (22-06-23 12:14)
+    '''
+      **Possível organização das pastas**:
+        → CDC
+          → extras
+            → CDC-TODO.todo
+            → diagrams.drawio
+            → uml.puml
+          → modules
+            → CalculatorAPI
+            → MerakiAnalytics
+            → MongoAPI
+          → utils
+          → venv-cdc
+          → requirements.txt
+          → .env
+          → .gitignore
+    '''
+  ❑ Organizar o repositório no Github
+    ❑ Deletar branchs desnecessárias
+    ❑ Renomear branchs
+  ❑ Refazer os requirements do projeto
+  ❑ Criar uma **documentação rica** para facilitar a entrada de novas pessoas dentro do projeto
+
+TODO - CelestialCodex:
+  ✔ Transformar as conveções de nomenclatura de camelCase para snake_case @done (22-06-23 12:27)
+  ✔ Remover alguns itens dos jsons gerados dos **items**: @done (22-06-23 12:33)
+    ✔ nicknames @done (22-06-23 12:33)
+    ✔ iconOverlay @done (22-06-23 12:33)
+  ❑ Remover alguns itens dos jsons gerados dos **champions**:
+    ❑ fullname
+    ❑ **stats**:
+        ❑ acquisitionRadius
+        ❑ selectionRadius
+        ❑ pathingRadius
+        ❑ gameplayRadius
+        ❑ aramDamageDealt
+        ❑ aramHealing
+        ❑ aramShielding
+        ❑ urfDamageTaken
+        ❑ urfDamageDealt
+        ❑ urfHealing
+        ❑ urfShielding
+    ❑ roles
+    ❑ attributeRatings
+    ❑ releaseDate
+    ❑ releasePatch
+    ❑ price
+    ❑ lore
+    ❑ factuin
+    ❑ skins
+  Runes:
+    '''
+      Pensar na forma de criar essas classes e funções do projeto.
+    '''
+    ❑ Criar as classes e funções para a geração dos jsons das **runas**:
+  ✔ **Pensar em um nome para o módulo**: Celestial Codex @done (22-06-23 11:51)
+
+'''
+  Preciso pensar em uma forma de melhorar a interação do módulo 'MerakiAnalytics' com o módulo 'MongoAPI'
+'''
+
+TODO - MongoAPI:
+  ❑ Pensar em um nome melhor para o módulo
+  ❑ Refatorar o código, pensando em criar serviços para facilitar a interação dos módulos, principalmente com o 'MerakAnalytics'
+
+TODO - CalculatorAPI:
+  ❑ Pensar em um nome melhor para o módulo
+  ❑ Estudar forma de criar códigos dinâmicos dentro do python
+
+TODO - Interface Web:
+  ❑ Criar o html/css básico
+
+a

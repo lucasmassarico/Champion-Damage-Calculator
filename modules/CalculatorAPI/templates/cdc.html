@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CDC LOL</title>
+</head>
+<body>
+    <select id="myList" onChange="update()">
+        <option value="Aatrox">Aatrox</option>
+        <option value="Ahri">Ahri</option>
+        <option value="Sejuani">Sejuani</option>
+    </select>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lista_champions.js') }}"></script>
+    <div id="champion-list"></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@startuml
+
+interface GUI_User {
+    web
+}
+
+package ChampionAPI <<endpoints to CRUD champion data in MongoDB>> #back:lightblue {
+    class DataAPI <<localhost:5999>> << (A,#FFFF00) >> #back:lightyellow {
+        + /champions
+        + /champions/<champion_id>
+    }
+
+    class Champions <<resource>> {
+        + get()
+    }
+
+    class Champion <<resource>> {
+        + get(champion_id)
+        + post(champion_id)
+        + put(champion_id)
+        + delete(champion_id)
+    }
+
+    class ChampionModel <<model>> {
+        + Int _id
+        + String name
+        + String resource
+        + String attackType
+        + String adaptiveType
+        + Dict stats
+        + Dict abilities
+
+        + json()
+        + ^find_champion_by_id(champion_id)
+        + ^find_champion_by_name(champion_name)
+        + ^find_all_champions()
+        + save_champion()
+        + update_champion_by_id()
+        + update_champion_by_name()
+        + ^delete_champion_by_id(champion_id)
+    }
+
+    class Data <<kwargs for Champion>> << (K,#FFFFFF) >> #back:FF2555 {
+        + Int _id
+        + String name
+        + String resource
+        + String attackType
+        + String adaptiveType
+        + Dict stats
+        + Dict abilities
+    }
+
+    skinparam roundcorner 10
+    skinparam ClassFontSize 14
+
+    ' pos of classes
+    Champion ..> Data
+    ChampionModel -u|> Champion
+    DataAPI -d|> Champion
+    DataAPI -u|> Champions
+}
+
+package CalculatorChampionAPI <<endpoint to calculator champion statistic>> #back:lightblue {
+    class CalculatorAPI <<localhost:5999>> << (A,#FFFF00) >> #back:lightyellow {
+    }
+
+    class Calculator <<resource>> <</champion/>> extends CalculatorAPI {
+        + level
+        + items
+        + runes
+        + get(champion_id)
+    }
+}
+GUI_User -d|> CalculatorChampionAPI
+CalculatorChampionAPI -|> ChampionAPI
+CalculatorChampionAPI -|> CalculatorAPI
+
+@enduml

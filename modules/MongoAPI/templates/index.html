@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endpoints MongoDB API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <strong>Endpoints</strong>
+    <ul class="alternating-colors">
+      <li>
+        <strong>/champions</strong>
+        <p>GET: Request all champions statistics</p>
+      </li>
+      <li>
+        <strong>/champions/{champion_id}</strong>
+        <p><b>GET:</b> Request a specific champion statistics</p>
+        <p><b>POST:</b> Create a new champion</p>
+          <p>&nbsp;&nbsp;[header] <u>Login Token</u></p>
+          <p>&nbsp;&nbsp;[required] <u>name</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>resource</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>attackType</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>adaptiveType</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>stats</u>: <i>dict</i></p>
+          <p>&nbsp;&nbsp;[required] <u>abilities</u>: <i>dict</i></p>
+        <p><b>PUT:</b> Create or update a champion</p>
+          <p>&nbsp;&nbsp;[header] <u>Login Token</u></p>
+          <p>&nbsp;&nbsp;[required] <u>name</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>resource</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>attackType</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>adaptiveType</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>stats</u>: <i>dict</i></p>
+          <p>&nbsp;&nbsp;[required] <u>abilities</u>: <i>dict</i></p>
+        <p><b>DELETE:</b> Delete a specific champion</p>
+          <p>&nbsp;&nbsp;[header] <u>Login Token</u></p>
+      </li>
+      <li>
+        <strong>/users/{username}</strong>
+        <p>Request a specific user</p>
+      </li>
+      <li>
+        <strong>/register</strong>
+        <p><b>POST:</b> Create a new user to access data in BD</p>
+          <p>&nbsp;&nbsp;[header] <u>Login Token</u></p>
+          <p>&nbsp;&nbsp;[required] <u>username</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>password</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[default: <i><u>read</u></i>]<u>level</u>: <i>string</i></p>
+      </li>
+      <li>
+        <strong>/login</strong>
+        <p><b>POST:</b> Access user to generate a Token</p>
+          <p>&nbsp;&nbsp;[required] <u>username</u>: <i>string</i></p>
+          <p>&nbsp;&nbsp;[required] <u>password</u>: <i>string</i></p>
+      </li>
+      <li>
+        <strong>/logout</strong>
+        <p><b>POST:</b> Logout user</p>
+          <p>&nbsp;&nbsp;[header] <u>Login Token</u></p>
+      </li>
+    </ul>
+</body>
+</html>
