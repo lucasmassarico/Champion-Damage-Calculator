@@ -9,7 +9,7 @@ searchInput.addEventListener('input', function() {
         const championMatchesSearch = championName.includes(searchText);
 
         if (championMatchesSearch) {
-            champion.style.display = 'block';
+            champion.style.display = 'flex';
         } else {
             champion.style.display = 'none';
         }

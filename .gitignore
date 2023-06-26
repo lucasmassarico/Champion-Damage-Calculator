@@ -1,20 +1,29 @@
 # main
-.env
 .idea
+.vscode
+.env
 __pycache__/
 __cache__/
-.vscode/
-.venv-cdc
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
+# extras
+extras/teste.py
+extras/teste2.py
+extras/baixar_icons_champions.py
+extras/teste3.py
+extras/html_teste.html
+extras/css_teste.css
+extras/old/Data/Classes/__pycache__/
+
 # CelestialCodex
-modules/CelestialCodex/__pycache__
+modules/CelestialCodex/items/
+modules/CelestialCodex/champions
+modules/CelestialCodex/__pycache__/
 modules/CelestialCodex/__cache__/
+modules/CelestialCodex/__wiki__
 modules/CelestialCodex/champions.json
 modules/CelestialCodex/items.json
-modules/CelestialCodex/items/
-modules/CelestialCodex/champions/
