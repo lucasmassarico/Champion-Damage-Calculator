@@ -1,14 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #222;
     color: #f5f5f5;
 }
 .champion-icons {
-    max-width: 350px;
-    min-width: 350px;
-    margin: 0px 50px auto;
+    max-width: 360px;
+    min-width: 360px;
+    margin: 0px 50px 20px;
     border-radius: 5px;
     background-color: #333;
     outline: 1px solid #333;
@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 1px;
+    padding: 2px;
 }
 
 .icon-container img {
@@ -47,10 +47,12 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 45px;
+  color: #9E9EB1;
+  line-height: 14px;
 }
 
 .search-container {
-    max-width: 295px;
+    max-width: 310px;
     padding: 10px 0px 0px 0px;
     margin: 0px 0px 5px 10px;
     border: none;
@@ -71,4 +73,40 @@ body {
 .search-icon {
   background-image: url("https://s-lol-web.op.gg/images/icon/icon-search-dark.svg");
   background-repeat: no-repeat;
+}
+
+.champion-container {
+    max-width: 360px;
+    min-width: 360px;
+    max-height: 500px;
+    margin: 0px 50px 10px 50px;
+    border-radius: 5px;
+    clear: both;
+}
+
+.y-champion-container {
+    display: none;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    justify-content: flex-start;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #333;
+    border: none;
+}
+
+.y-champion-container img {
+    border-radius: 10px;
+}
+
+.y-champion-container-stats img {
+    width: 32px;
+    height: 32px;
+
+    ,,,
+}
+
+.mana-stats {
+    max-width: 26px;
+    max-height: 26px;
 }

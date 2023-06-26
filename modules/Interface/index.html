@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Champion Damage Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class ="champion-container">
+    <div class="y-champion-container">
+      <div class="y-champion-container-img"></div>
+      <div class="y-champion-container-stats">
+        <img class="health-stats" src="icons/icon_stats/health_32x32.png" alt="Health">
+        <img class="mana-stats" src="icons/icon_stats/mana_72x72.png" alt="mana">
+      </div>
+    </div>
+  </section>
+
+  <section class="champion-icons">
+    <div class="search-container">
+    <input type="text" id="search-input" placeholder="Procure o campeão" class="search-icon">
+    </div>
+  <div class="icon-container">
+    <div>
+    <img src="icons/icons_champions/Aatrox.png" alt="Aatrox">
+    <span>Aatrox</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ahri.png" alt="Ahri">
+    <span>Ahri</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Akali.png" alt="Akali">
+    <span>Akali</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Akshan.png" alt="Akshan">
+    <span>Akshan</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Alistar.png" alt="Alistar">
+    <span>Alistar</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Amumu.png" alt="Amumu">
+    <span>Amumu</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Anivia.png" alt="Anivia">
+    <span>Anivia</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Annie.png" alt="Annie">
+    <span>Annie</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Aphelios.png" alt="Aphelios">
+    <span>Aphelios</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ashe.png" alt="Ashe">
+    <span>Ashe</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/AurelionSol.png" alt="AurelionSol">
+    <span>Aurelion Sol</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Azir.png" alt="Azir">
+    <span>Azir</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Bard.png" alt="Bard">
+    <span>Bard</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Belveth.png" alt="Belveth">
+    <span>Bel'veth</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Blitzcrank.png" alt="Blitzcrank">
+    <span>Blitzcrank</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Brand.png" alt="Brand">
+    <span>Brand</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Braum.png" alt="Braum">
+    <span>Braum</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Caitlyn.png" alt="Caitlyn">
+    <span>Caitlyn</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Camille.png" alt="Camille">
+    <span>Camille</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Cassiopeia.png" alt="Cassiopeia">
+    <span>Cassiopeia</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Chogath.png" alt="Chogath">
+    <span>Cho'gath</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Corki.png" alt="Corki">
+    <span>Corki</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Darius.png" alt="Darius">
+    <span>Darius</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Diana.png" alt="Diana">
+    <span>Diana</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Draven.png" alt="Draven">
+    <span>Draven</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/DrMundo.png" alt="DrMundo">
+    <span>Dr. Mundo</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ekko.png" alt="Ekko">
+    <span>Ekko</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Elise.png" alt="Elise">
+    <span>Elise</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Evelynn.png" alt="Evelynn">
+    <span>Evelynn</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ezreal.png" alt="Ezreal">
+    <span>Ezreal</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Fiddlesticks.png" alt="Fiddlesticks">
+    <span>Fiddlesticks</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Fiora.png" alt="Fiora">
+    <span>Fiora</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Fizz.png" alt="Fizz">
+    <span>Fizz</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Galio.png" alt="Galio">
+    <span>Galio</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Gangplank.png" alt="Gangplank">
+    <span>Gangplank</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Garen.png" alt="Garen">
+    <span>Garen</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Gnar.png" alt="Gnar">
+    <span>Gnar</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Gragas.png" alt="Gragas">
+    <span>Gragas</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Graves.png" alt="Graves">
+    <span>Graves</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Gwen.png" alt="Gwen">
+    <span>Gwen</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Hecarim.png" alt="Hecarim">
+    <span>Hecarim</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Heimerdinger.png" alt="Heimerdinger">
+    <span>Heimerdinger</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Illaoi.png" alt="Illaoi">
+    <span>Illaoi</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Irelia.png" alt="Irelia">
+    <span>Irelia</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ivern.png" alt="Ivern">
+    <span>Ivern</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Janna.png" alt="Janna">
+    <span>Janna</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/JarvanIV.png" alt="JarvanIV">
+    <span>Jarvan IV</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Jax.png" alt="Jax">
+    <span>Jax</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Jayce.png" alt="Jayce">
+    <span>Jayce</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Jhin.png" alt="Jhin">
+    <span>Jhin</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Jinx.png" alt="Jinx">
+    <span>Jinx</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kaisa.png" alt="Kaisa">
+    <span>Kai'sa</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kalista.png" alt="Kalista">
+    <span>Kalista</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Karma.png" alt="Karma">
+    <span>Karma</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Karthus.png" alt="Karthus">
+    <span>Karthus</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kassadin.png" alt="Kassadin">
+    <span>Kassadin</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Katarina.png" alt="Katarina">
+    <span>Katarina</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kayle.png" alt="Kayle">
+    <span>Kayle</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kayn.png" alt="Kayn">
+    <span>Kayn</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kennen.png" alt="Kennen">
+    <span>Kennen</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Khazix.png" alt="Khazix">
+    <span>Kha'zix</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kindred.png" alt="Kindred">
+    <span>Kindred</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Kled.png" alt="Kled">
+    <span>Kled</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/KogMaw.png" alt="KogMaw">
+    <span>Kog'Maw</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/KSante.png" alt="KSante">
+    <span>K'Sante</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Leblanc.png" alt="Leblanc">
+    <span>Leblanc</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/LeeSin.png" alt="LeeSin">
+    <span>Lee Sin</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Leona.png" alt="Leona">
+    <span>Leona</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Lillia.png" alt="Lillia">
+    <span>Lillia</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Lissandra.png" alt="Lissandra">
+    <span>Lissandra</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Lucian.png" alt="Lucian">
+    <span>Lucian</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Lulu.png" alt="Lulu">
+    <span>Lulu</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Lux.png" alt="Lux">
+    <span>Lux</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Malphite.png" alt="Malphite">
+    <span>Malphite</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Malzahar.png" alt="Malzahar">
+    <span>Malzahar</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Maokai.png" alt="Maokai">
+    <span>Maokai</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/MasterYi.png" alt="MasterYi">
+    <span>Master Yi</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Milio.png" alt="Milio">
+    <span>Milio</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/MissFortune.png" alt="MissFortune">
+    <span>MissFortune</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/MonkeyKing.png" alt="MonkeyKing">
+    <span>MonkeyKing</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Mordekaiser.png" alt="Mordekaiser">
+    <span>Mordekaiser</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Morgana.png" alt="Morgana">
+    <span>Morgana</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nami.png" alt="Nami">
+    <span>Nami</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nasus.png" alt="Nasus">
+    <span>Nasus</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nautilus.png" alt="Nautilus">
+    <span>Nautilus</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Neeko.png" alt="Neeko">
+    <span>Neeko</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nidalee.png" alt="Nidalee">
+    <span>Nidalee</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nilah.png" alt="Nilah">
+    <span>Nilah</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nocturne.png" alt="Nocturne">
+    <span>Nocturne</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Nunu.png" alt="Nunu">
+    <span>Nunu</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Olaf.png" alt="Olaf">
+    <span>Olaf</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Orianna.png" alt="Orianna">
+    <span>Orianna</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ornn.png" alt="Ornn">
+    <span>Ornn</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Pantheon.png" alt="Pantheon">
+    <span>Pantheon</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Poppy.png" alt="Poppy">
+    <span>Poppy</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Pyke.png" alt="Pyke">
+    <span>Pyke</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Qiyana.png" alt="Qiyana">
+    <span>Qiyana</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Quinn.png" alt="Quinn">
+    <span>Quinn</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Rakan.png" alt="Rakan">
+    <span>Rakan</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Rammus.png" alt="Rammus">
+    <span>Rammus</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/RekSai.png" alt="RekSai">
+    <span>Rek'Sai</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Rell.png" alt="Rell">
+    <span>Rell</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Renata.png" alt="Renata">
+    <span>Renata</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Renekton.png" alt="Renekton">
+    <span>Renekton</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Rengar.png" alt="Rengar">
+    <span>Rengar</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Riven.png" alt="Riven">
+    <span>Riven</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Rumble.png" alt="Rumble">
+    <span>Rumble</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ryze.png" alt="Ryze">
+    <span>Ryze</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Samira.png" alt="Samira">
+    <span>Samira</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sejuani.png" alt="Sejuani">
+    <span>Sejuani</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Senna.png" alt="Senna">
+    <span>Senna</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Seraphine.png" alt="Seraphine">
+    <span>Seraphine</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sett.png" alt="Sett">
+    <span>Sett</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Shaco.png" alt="Shaco">
+    <span>Shaco</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Shen.png" alt="Shen">
+    <span>Shen</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Shyvana.png" alt="Shyvana">
+    <span>Shyvana</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Singed.png" alt="Singed">
+    <span>Singed</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sion.png" alt="Sion">
+    <span>Sion</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sivir.png" alt="Sivir">
+    <span>Sivir</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Skarner.png" alt="Skarner">
+    <span>Skarner</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sona.png" alt="Sona">
+    <span>Sona</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Soraka.png" alt="Soraka">
+    <span>Soraka</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Swain.png" alt="Swain">
+    <span>Swain</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Sylas.png" alt="Sylas">
+    <span>Sylas</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Syndra.png" alt="Syndra">
+    <span>Syndra</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/TahmKench.png" alt="TahmKench">
+    <span>Tahm Kench</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Taliyah.png" alt="Taliyah">
+    <span>Taliyah</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Talon.png" alt="Talon">
+    <span>Talon</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Taric.png" alt="Taric">
+    <span>Taric</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Teemo.png" alt="Teemo">
+    <span>Teemo</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Thresh.png" alt="Thresh">
+    <span>Thresh</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Tristana.png" alt="Tristana">
+    <span>Tristana</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Trundle.png" alt="Trundle">
+    <span>Trundle</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Tryndamere.png" alt="Tryndamere">
+    <span>Tryndamere</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/TwistedFate.png" alt="TwistedFate">
+    <span>Twisted Fate</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Twitch.png" alt="Twitch">
+    <span>Twitch</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Udyr.png" alt="Udyr">
+    <span>Udyr</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Urgot.png" alt="Urgot">
+    <span>Urgot</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Varus.png" alt="Varus">
+    <span>Varus</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Vayne.png" alt="Vayne">
+    <span>Vayne</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Veigar.png" alt="Veigar">
+    <span>Veigar</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Velkoz.png" alt="Velkoz">
+    <span>Vel'koz</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Vex.png" alt="Vex">
+    <span>Vex</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Vi.png" alt="Vi">
+    <span>Vi</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Viego.png" alt="Viego">
+    <span>Viego</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Viktor.png" alt="Viktor">
+    <span>Viktor</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Vladimir.png" alt="Vladimir">
+    <span>Vladimir</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Volibear.png" alt="Volibear">
+    <span>Volibear</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Warwick.png" alt="Warwick">
+    <span>Warwick</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Xayah.png" alt="Xayah">
+    <span>Xayah</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Xerath.png" alt="Xerath">
+    <span>Xerath</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/XinZhao.png" alt="XinZhao">
+    <span>Xin Zhao</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Yasuo.png" alt="Yasuo">
+    <span>Yasuo</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Yone.png" alt="Yone">
+    <span>Yone</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Yorick.png" alt="Yorick">
+    <span>Yorick</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Yuumi.png" alt="Yuumi">
+    <span>Yuumi</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zac.png" alt="Zac">
+    <span>Zac</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zed.png" alt="Zed">
+    <span>Zed</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zeri.png" alt="Zeri">
+    <span>Zeri</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Ziggs.png" alt="Ziggs">
+    <span>Ziggs</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zilean.png" alt="Zilean">
+    <span>Zilean</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zoe.png" alt="Zoe">
+    <span>Zoe</span>
+    </div>
+    <div>
+    <img src="icons/icons_champions/Zyra.png" alt="Zyra">
+    <span>Zyra</span>
+    </div>
+  </div>
+</section>
+<script src="script.js"></script>
+<script src="campeao.js"></script>
+</body>
+</html>
