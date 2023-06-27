@@ -6,9 +6,9 @@ body {
     color: #f5f5f5;
 }
 .champion-icons {
-    max-width: 360px;
-    min-width: 360px;
-    margin: 0px 50px 20px;
+    max-width: 380px;
+    min-width: 380px;
+    margin: 0px 40px 20px;
     border-radius: 5px;
     background-color: #333;
     outline: 1px solid #333;
@@ -32,8 +32,8 @@ body {
 }
 
 .icon-container img {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     border-radius: 5px;
     object-fit: cover;
     object-position: center;
@@ -52,7 +52,7 @@ body {
 }
 
 .search-container {
-    max-width: 310px;
+    max-width: 330px;
     padding: 10px 0px 0px 0px;
     margin: 0px 0px 5px 10px;
     border: none;
@@ -61,7 +61,7 @@ body {
 .search-container input[type="text"] {
     width: 100%;
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     background-color: #222;
     color: white;
@@ -71,33 +71,41 @@ body {
 }
 
 .search-icon {
-  background-image: url("https://s-lol-web.op.gg/images/icon/icon-search-dark.svg");
+  background-image: url("icons/icon-search-dark.svg");
   background-repeat: no-repeat;
 }
 
 .champion-container {
-    max-width: 360px;
-    min-width: 360px;
-    max-height: 130px;
-    margin: 0px 50px 10px 50px;
-    border-radius: 5px;
+    max-width: 380px;
+    min-width: 380px;
+    max-height: 380px;
+    margin: 0px 50px 10px 40px;
     clear: both;
     overflow: hidden;
 }
 
+.y-champion-abilities {
+    display: none;
+    max-width: 380px;
+    min-width: 380px;
+    max-height: 430px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #333;
+}
+
 .y-champion-container {
   display: none;
-  border: 2px solid white;
   justify-content: flex-start;
   padding: 5px;
-  border-radius: 5px;
   background-color: #333;
+  border-radius: 5px;
   border: none;
 }
 
 .y-champion-container-img {
   flex: 0 0 auto;
-  margin-right: 5px;
+  margin-right: 3px;
   max-width: 120px; /* Defina a largura desejada para a imagem */
   max-height: 120px; /* Defina a altura desejada para a imagem */
 }
@@ -108,30 +116,47 @@ body {
 
 .y-champion-container-stats {
   display: flex;
+  left: 0;
   flex-direction: column;
   max-height: 120px; /* Defina a altura máxima desejada */
+  min-width: 105px;
   /* overflow-y: auto; */
   overflow: hidden;
   margin-left: 0px;
+  margin-right: 3px;
+  background-color: #292929;
+  border-radius: 5px;
+}
+
+.y-champion-container-second-stats {
+  display: flex;
+  right: 0;
+  flex-direction: column;
+  max-height: 120px; /* Defina a altura máxima desejada */
+  min-width: 130px;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  margin-left: 0px;
+  background-color: #292929;
+  border-radius: 5px;
 }
 
 .champion-container ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Primeira coluna automática, segunda coluna preenchendo o espaço restante */
+  grid-template-columns: repeat(2, 1fr); /* Primeira coluna automática, segunda coluna preenchendo o espaço restante */
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 }
 
 .champion-container ul li {
   display: flex;
   align-items: center;
-  width: 46px;
   margin-top: 3px;
-  margin-bottom: 5px;
-  margin-left: 1px;
-  margin-right: 10px;
-  font-size: 14px;
+  margin-bottom: 7px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 12px;
 }
 
 .champion-container ul li img {
@@ -141,4 +166,61 @@ body {
 .y-champion-container-stats ul li img{
     max-width: 14px;
     max-height: 14px;
+    margin-left: 3px;
+}
+
+.y-champion-container-second-stats ul li img{
+    max-width: 14px;
+    max-height: 14px;
+    margin-left: 3px;
+}
+
+.span-font-size {
+    font-size: 10px !important;
+}
+
+.y-champion-abilities-type ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Primeira coluna automática, segunda coluna preenchendo o espaço restante */
+    list-style: none;
+    padding: 5px;
+    margin: 0px;
+}
+
+.y-champion-abilities-type ul li {
+    min-width: 40px;
+    min-height: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px !important;
+    cursor: pointer;
+}
+
+.ability-info {
+  display: none;
+  min-width: 300px;
+  min-height: 100px;
+  padding: 5px;
+  border: 1px solid white;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.ability-info > div {
+    display: none;
+}
+
+.ability-info > div.active {
+    display: block;
+}
+
+.p-ability-info {
+    display: block;
+    min-width: 100px;
+    min-height: 100px;
 }
