@@ -90,7 +90,7 @@ body {
     min-width: 380px;
     max-height: 430px;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #333;
 }
 
@@ -180,16 +180,22 @@ body {
 }
 
 .y-champion-abilities-type ul {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(5, 1fr); /* Primeira coluna automática, segunda coluna preenchendo o espaço restante */
     list-style: none;
-    padding: 5px;
-    margin: 0px;
+    margin: 5px;
+    padding-top: 4px;
+    left: 0;
+    border-radius: 5px;
+    max-width: 260px;
+    background-color: #292929;
 }
 
 .y-champion-abilities-type ul li {
     min-width: 40px;
+    max-width: 40px;
     min-height: 30px;
+    max-height: 30px;
     margin-right: 5px;
     margin-left: 5px;
     align-items: center;
@@ -202,13 +208,14 @@ body {
 
 .ability-info {
   display: none;
-  min-width: 300px;
+  min-width: 360px;
   min-height: 100px;
   padding: 5px;
-  border: 1px solid white;
+  border-radius: 5px;
   align-items: flex-start;
   margin-left: 5px;
   margin-bottom: 5px;
+  background-color: #292929;
 }
 
 .ability-info > div {
@@ -221,6 +228,14 @@ body {
 
 .p-ability-info {
     display: block;
-    min-width: 100px;
-    min-height: 100px;
+    width: 360px;
+}
+
+.p-ability-info-header {
+    max-height: 30px;
+    border: 1px solid white;
+}
+
+.p-ability-info-description {
+    border: 1px solid white;
 }

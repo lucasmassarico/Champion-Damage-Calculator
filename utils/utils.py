@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import requests
 from typing import Union
 from natsort import natsorted
@@ -35,3 +36,13 @@ def get_latest_patch_version():
     versions = [v for v in versions if "_" not in v]
     versions = natsorted(versions)
     return versions[-1]
+
+
+def get_patch_version_in_url(url, pattern):
+    # pass a pattern and url and he find a patch version
+    result = re.search(pattern, url)
+    if result:
+        patch = result.group(1)
+        return patch
+    else:
+        raise ValueError("Error: not get patch version")

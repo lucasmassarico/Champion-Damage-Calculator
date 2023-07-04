@@ -164,7 +164,7 @@ class LolWikiDataHandler:
                 d["skill_r"] = {1: d["skills"][8], 2: d["skills"][9]}
             if (
                 d["id"] == 9999
-                or d["id"] == 9999999999
+                or d["id"] == 950 # Naafiri
                 or d["date"] == "Upcoming"
                 or datetime.strptime(d["date"], "%Y-%m-%d") > datetime.today()
             ):  # Champion not released yet
