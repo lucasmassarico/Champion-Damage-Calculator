@@ -2,9 +2,12 @@ import os
 import json
 from bs4 import BeautifulSoup
 
-from modules.CelestialCodex.lolstaticdata.common import utils
-from modules.CelestialCodex.lolstaticdata.champions.pull_champions_wiki import LolWikiDataHandler
-from modules.CelestialCodex.lolstaticdata.champions.pull_champions_dragons import get_ability_url as _get_ability_url
+from ..common import utils
+from .pull_champions_wiki import LolWikiDataHandler
+from .pull_champions_dragons import get_ability_url as _get_ability_url
+# from modules.CelestialCodex.lolstaticdata.common import utils
+# from modules.CelestialCodex.lolstaticdata.champions.pull_champions_wiki import LolWikiDataHandler
+# from modules.CelestialCodex.lolstaticdata.champions.pull_champions_dragons import get_ability_url as _get_ability_url
 
 
 def get_ability_filenames(url):
@@ -12,18 +15,19 @@ def get_ability_filenames(url):
     soup = BeautifulSoup(soup, "lxml")
 
     filenames = []
-    for td in soup.findAll("td"):
-        a = td.a
-        if a is not None:
-            fn = a["href"]
-            if ".." not in fn:
-                filenames.append(fn)
+    for td_tag in soup.findAll("td"):
+        a_tag = td_tag.a
+        if a_tag is not None:
+            filename = a_tag["href"]
+            if ".." not in filename:
+                filenames.append(filename)
     return filenames
 
 
-def main():
+def create_champions_json():
     handler = LolWikiDataHandler(use_cache=False)
-    directory = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), "../.."))
+    directory = os.path.abspath(os.path.join(
+        os.path.dirname(os.path.realpath(__file__)), "../.."))
     if not os.path.exists(os.path.join(directory, "champions")):
         os.mkdir(os.path.join(directory, "champions"))
 
@@ -70,18 +74,20 @@ def main():
                 ability.icon = url
 
         champions.append(champion)
-        jsonfn = os.path.join(directory, "champions", str(champion.key) + ".json")
-        with open(jsonfn, "w", encoding="utf8") as f:
-            f.write(champion.__json__(indent=2, ensure_ascii=False))
+        jsonfn = os.path.join(directory, "champions",
+                              str(champion.key) + ".json")
+        with open(jsonfn, "w", encoding="utf8") as file:
+            file.write(champion.__json__(indent=2, ensure_ascii=False))
 
     jsonfn = os.path.join(directory, "champions.json")
     jsons = {}
     for champion in champions:
         jsons[champion.key] = json.loads(champion.__json__(ensure_ascii=False))
-    with open(jsonfn, "w", encoding="utf8") as f:
-        json.dump(jsons, f, indent=2, ensure_ascii=False)
+    with open(jsonfn, "w", encoding="utf8") as file:
+        json.dump(jsons, file, indent=2, ensure_ascii=False)
     del jsons
 
 
 if __name__ == "__main__":
-    main()
+    create_champions_json()
+

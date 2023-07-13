@@ -9,7 +9,7 @@ def update_champions_in_bd():
             PUT /champions/{champions_id}: to insert/update champion in DB
         Returns:
             Nothing
-        """
+    """
     from modules.MongoAPI.resources.service_config import champions_meraki_endpoint
 
     data = get_dict_content_from_endpoints(champions_meraki_endpoint)

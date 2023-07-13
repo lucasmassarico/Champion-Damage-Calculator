@@ -1,5 +1,5 @@
-from fuzzywuzzy import fuzz
 from functools import partial
+from fuzzywuzzy import fuzz
 
 
 def maximize(func, guesses):

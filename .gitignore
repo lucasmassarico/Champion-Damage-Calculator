@@ -9,6 +9,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+dist/
+build/
+CDC.egg-info/
 
 # extras
 extras/teste.py

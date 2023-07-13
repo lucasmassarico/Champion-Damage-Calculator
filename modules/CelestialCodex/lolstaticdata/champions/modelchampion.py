@@ -1,7 +1,7 @@
 from typing import Mapping, List, Union
 from dataclasses import dataclass
-import dataclasses_json
 import json
+import dataclasses_json
 
 from ..common.modelcommon import (
     DamageType,
@@ -12,16 +12,9 @@ from ..common.modelcommon import (
     Armor,
     MagicResistance,
     AttackDamage,
-    AbilityPower,
     AttackSpeed,
     AttackRange,
     Movespeed,
-    Lethality,
-    CooldownReduction,
-    GoldPer10,
-    HealAndShieldPower,
-    Lifesteal,
-    MagicPenetration,
     Stat,
 )
 from ..common.utils import OrderedEnum, ExtendedEncoder
@@ -175,13 +168,16 @@ class Champion(object):
     abilities: Mapping[str, List[Ability]]
     patch_last_changed: str
 
+    def to_dict(self):
+        return Champion.to_dict(self)
+
     def __json__(self, *args, **kwargs):
         # Use dataclasses_json to get the dict
-        d = self.to_dict()
+        champion_dict = self.to_dict()
         # Delete the two stat objects that don't apply to champions
-        for name, stat in d["stats"].items():
+        for name, stat in champion_dict["stats"].items():
             if isinstance(stat, dict):
                 del stat["percent_base"]
                 del stat["percent_bonus"]
         # Return the (un)modified dict
-        return json.dumps(d, cls=ExtendedEncoder, *args, **kwargs)
+        return json.dumps(champion_dict, cls=ExtendedEncoder, *args, **kwargs)

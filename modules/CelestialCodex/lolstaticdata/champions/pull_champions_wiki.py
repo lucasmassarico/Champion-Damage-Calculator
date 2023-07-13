@@ -1,9 +1,9 @@
 from typing import Tuple, List, Union, Iterator, Dict
 import re
-from bs4 import BeautifulSoup
 from collections import Counter
-from slpp import slpp as lua
 from datetime import datetime
+from bs4 import BeautifulSoup
+from slpp import slpp as lua
 
 from ..common.modelcommon import (
     DamageType,
@@ -93,10 +93,10 @@ class HTMLAbilityWrapper:
             return backup
 
     def __str__(self):
-        d = {}
+        d_string = {}
         for key in self.data:
-            d[key] = self[key]
-        return str(d)
+            d_string[key] = self[key]
+        return str(d_string)
 
 
 class LolWikiDataHandler:
@@ -118,8 +118,8 @@ class LolWikiDataHandler:
         self.use_cache = use_cache
 
     def check_ability(self, data):
-        for x in data:
-            if data[x] in self.abil_test:
+        for data_item in data:
+            if data[data_item] in self.abil_test:
                 continue
             else:
                 return False
@@ -148,7 +148,7 @@ class LolWikiDataHandler:
         spans = "".join(spans)
         data = lua.decode(spans)
 
-        for name, d in data.items():
+        for name, data_item in data.items():
             print(name)
             if name in [
                 'Kled & Skaarl',
@@ -158,18 +158,18 @@ class LolWikiDataHandler:
                 continue
             if name in ["Kled"]:
                 # champion = self._render_champion_data(name, d)
-                d["skill_i"] = {1: d["skills"][1], 2: d["skills"][2]}
-                d["skill_q"] = {1: d["skills"][3], 2: d["skills"][4]}
-                d["skill_e"] = {1: d["skills"][6], 2: d["skills"][7]}
-                d["skill_r"] = {1: d["skills"][8], 2: d["skills"][9]}
+                data_item["skill_i"] = {1: data_item["skills"][1], 2: data_item["skills"][2]}
+                data_item["skill_q"] = {1: data_item["skills"][3], 2: data_item["skills"][4]}
+                data_item["skill_e"] = {1: data_item["skills"][6], 2: data_item["skills"][7]}
+                data_item["skill_r"] = {1: data_item["skills"][8], 2: data_item["skills"][9]}
             if (
-                d["id"] == 9999
-                or d["id"] == 950 # Naafiri
-                or d["date"] == "Upcoming"
-                or datetime.strptime(d["date"], "%Y-%m-%d") > datetime.today()
+                data_item["id"] == 9999
+                # or d["id"] == 950 # Naafiri
+                or data_item["date"] == "Upcoming"
+                or datetime.strptime(data_item["date"], "%Y-%m-%d") > datetime.today()
             ):  # Champion not released yet
                 continue
-            champion = self._render_champion_data(name, d)
+            champion = self._render_champion_data(name, data_item)
             yield champion
 
     def _render_champion_data(self, name: str, data: Dict) -> Champion:
@@ -491,9 +491,9 @@ class LolWikiDataHandler:
         hashes = []
         unique_abilities = []
         for ability in abilities:
-            h = hash(str(ability))
-            if h not in hashes:
-                hashes.append(h)
+            h_compare = hash(str(ability))
+            if h_compare not in hashes:
+                hashes.append(h_compare)
                 unique_abilities.append(ability)
         return skill_key, unique_abilities
 
